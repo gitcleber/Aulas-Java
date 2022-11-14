@@ -16,7 +16,7 @@ public class UserService {
     public List<UserDTO> findAll(){
         List<User> usersEntity = userRepository.findAll();
         List<UserDTO> usersDTO = null;
-        
+
         for (User userEntity : usersEntity) {
             UserDTO userDTO = new UserDTO(userEntity);
             usersDTO.add(userDTO);
