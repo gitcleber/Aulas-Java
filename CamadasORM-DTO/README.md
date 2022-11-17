@@ -1,5 +1,7 @@
 ## Camadas, ORM e DTO:
 
+[Video Aula](https://www.youtube.com/watch?v=7HvOBCqHWvA&t=8s)
+
 #### Pequeno projeto para estudo de camadas, ORM e DTO - com Java e Spring.
 
 #### Padrão Camadas:
@@ -57,15 +59,18 @@ Já na camada de Serviço temos as entidades, que são objetos monitorados event
 - criar classe User.java no pacote entities
 
   abrir
+
   ```
   localhost:8080/h2-console
   ```
+
   Verificar se a tabela tb_user foi criada.
 
   #### Criar uma API para retornar os usuários
-- dentro do esquema de camadas 
+
+- dentro do esquema de camadas
 - criamos uma interface repository UserRepository extendendo de JPARepository - objeto responsável por acessar os dados do banco relaciomados a User (usuário).
-- criar uma classe para serviços UserServices 
+- criar uma classe para serviços UserServices
 - criar classe UserDTO que será responsável por trafegar os dados de usuário entre a camada de serviço e a camada de controle.
 - no UserService criar um método para chamar a busca de usuários no UserRepository e retornar um DTO para o Controlador.
 - Criar uma classe controlador UserController para receber e responder as requisiçoes http do front-end
@@ -74,5 +79,5 @@ Já na camada de Serviço temos as entidades, que são objetos monitorados event
   @RestController
   @RequestMapping(value = "/users")
   ```
-- 
+-
 - ...
